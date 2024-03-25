@@ -1,12 +1,16 @@
+import './App.css';
 import { Reset } from 'styled-reset';
+import { MainBackgroundComponent } from './components/layout/MainBackgroundComponent';
 import { HomePage } from './pages/HomePage';
 
 const App = () => {
     return (
-        <div>
+        <>
             <Reset />
-            <HomePage />
-        </div>
+            <MainBackgroundComponent>
+                <HomePage />
+            </MainBackgroundComponent>
+        </>
     );
 };
 
