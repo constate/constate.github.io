@@ -17,12 +17,12 @@ const Router: React.FC = React.memo(() => {
         {
             path: '/',
             element: <HomePage />,
-            children: [
-                {
-                    path: '',
-                    element: <HomePage />,
-                },
-            ],
+            // children: [
+            //     {
+            //         path: '',
+            //         element: <HomePage />,
+            //     },
+            // ],
             errorElement: <HomePage />,
         },
     ]);
