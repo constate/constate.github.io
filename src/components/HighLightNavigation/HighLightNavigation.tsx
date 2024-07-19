@@ -17,7 +17,7 @@ interface Props {
 
 export const HighLightNavigation = (props: Props) => {
     const { t, i18n } = useTranslation();
-    const { itemList, children } = props;
+    const { itemList } = props;
     const [selectedChild, setSelectedChild] = useState<number>(0);
     const [highlightPosition, setHighlightPosition] = useState<{
         left: number;
