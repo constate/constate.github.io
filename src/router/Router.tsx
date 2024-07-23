@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { HomePage } from 'pages';
+import { HomePage, CareerDescPage } from 'pages';
 import { Layout } from 'components/_common/Layout/Layout';
 import {
     Routes,
@@ -22,6 +22,14 @@ const Router: React.FC = React.memo(() => {
                 {
                     path: '',
                     element: <HomePage />,
+                },
+                {
+                    path: 'home',
+                    element: <HomePage />,
+                },
+                {
+                    path: 'career',
+                    element: <CareerDescPage />,
                 },
             ],
             errorElement: <HomePage />,
