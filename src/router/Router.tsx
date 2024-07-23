@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 import { HomePage } from 'pages';
+import { Layout } from 'components/_common/Layout/Layout';
 import {
     Routes,
     Route,
@@ -16,13 +17,13 @@ const Router: React.FC = React.memo(() => {
     const router = createBrowserRouter([
         {
             path: '/',
-            element: <HomePage />,
-            // children: [
-            //     {
-            //         path: '',
-            //         element: <HomePage />,
-            //     },
-            // ],
+            element: <Layout />,
+            children: [
+                {
+                    path: '',
+                    element: <HomePage />,
+                },
+            ],
             errorElement: <HomePage />,
         },
     ]);

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useTheme } from 'hooks/theme/useTheme';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import { useTranslation } from 'react-i18next';
 
 function ToggleTheme() {
@@ -7,13 +8,17 @@ function ToggleTheme() {
     const [themeMode, toggleTheme] = useTheme();
 
     return (
-        <ToggleWrapper onClick={toggleTheme}>{t(`${themeMode}`)}</ToggleWrapper>
+        <DarkModeSwitch
+            checked={themeMode === 'dark'}
+            onChange={() => {
+                toggleTheme();
+            }}
+        />
     );
 }
 export default ToggleTheme;
 
 const ToggleWrapper = styled.button`
     width: 6rem;
-    color: ${({ theme }) => theme.colors.textDefault};
     cursor: pointer;
 `;
