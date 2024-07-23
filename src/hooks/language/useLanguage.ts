@@ -1,5 +1,6 @@
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
+import ChannelService from 'utils/channelTalk/ChannelService';
 
 const useLanguage = () => {
     const { i18n } = useTranslation();
@@ -13,7 +14,6 @@ const useLanguage = () => {
 
     const toggleLanguage = useCallback(() => {
         const currentLanguage = i18n.language;
-        console.log('currentLanguage', currentLanguage);
         const newLanguage =
             currentLanguage === 'LANG_EN' ? 'LANG_KO' : 'LANG_EN';
         changeLanguage(newLanguage);
