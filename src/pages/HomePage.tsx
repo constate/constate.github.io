@@ -18,8 +18,16 @@ export const HomePage = (props: Props) => {
     );
 };
 
-const HomePageWrap = styled.div``;
+const HomePageWrap = styled.div`
+    margin-top: 6rem;
+`;
 const HeaderWrap = styled.header``;
-const HeaderTitle = styled.h1``;
-const HeaderMain = styled.p``;
-const HeaderLast = styled.p``;
+const HeaderTitle = styled.h1`
+    color: ${({ theme }) => theme.colors.textDefault};
+`;
+const HeaderMain = styled.p`
+    color: ${({ theme }) => theme.colors.textDefault};
+`;
+const HeaderLast = styled.p`
+    color: ${({ theme }) => theme.colors.textDefault};
+`;

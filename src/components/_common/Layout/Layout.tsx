@@ -24,15 +24,15 @@ const LayoutWrap = styled.div`
     width: 100%;
     height: 100vh;
     overflow: auto;
-    background-color: #ffffff;
+    background-color: ${({ theme }) => theme.colors.common};
 `;
 const Header = styled.header`
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 6rem;
-    background-color: ${({ theme }) => theme.colors.common};
     padding: 0 2.4rem;
 `;
 
